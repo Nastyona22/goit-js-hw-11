@@ -1,0 +1,36 @@
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  background-color: #1fc28c;
+
+
+}
+@media screen and (min-width: 480px) {
+    .container {
+      width: 480px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 768px;
+    }
+  }
+
+  @media screen and (min-width: 1199.98px) {
+    .container {
+      width: 1200px;
+    }
+  }
+
+  
+
+
+
+
+button {
+  cursor: pointer;
+}
