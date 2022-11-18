@@ -1,4 +1,3 @@
-
 import './sass/index.scss';
 
 import SimpleLightbox from 'simplelightbox';
