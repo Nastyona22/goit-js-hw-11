@@ -1,7 +1,18 @@
+
+import './sass/index.scss';
+
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { refs } from './js/refs';
 import { pixabayAPI} from './js/pixabayAPI';
 import { createMarkup } from './js/createMarkup';
+
+
+const lightbox = new SimpleLightbox('.gallery a');
+
+
 
 const pixabay = new pixabayAPI();
 let query = '';
@@ -23,7 +34,7 @@ const handleSubmit = async event => {
 
     try {
         const { hits, totalHits } = await pixabay.getPhotos(query);
-        console.log(query);
+       
         if (totalHits > 0) {
             const markup = createMarkup(hits);
             refs.gallery.insertAdjacentHTML('beforeend', markup);

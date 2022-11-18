@@ -1,10 +1,7 @@
 
-// import SimpleLightbox from "simplelightbox";
-// import "simplelightbox/dist/simple-lightbox.min.css";
-
 export function createMarkup(results) {
     return results.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => {
-        return /*html*/ ` <div  class="photo-card list">
+        return /*html*/ ` <li class="photo-card">
   <img class= "gallery-img" src="${webformatURL}" alt="${tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
@@ -20,7 +17,7 @@ export function createMarkup(results) {
       <b>Downloads</b>${downloads}
     </p>
   </div>
-</div >`
+</div>`
     })
     .join('');
 }
