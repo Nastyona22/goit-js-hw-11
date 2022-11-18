@@ -4,7 +4,7 @@ import axios from 'axios';
 export class pixabayAPI {
   #page = 1;
   #totalPages = 0;
-  #perPage = 10;
+  #perPage = 40;
 
   // #request = '';
 
