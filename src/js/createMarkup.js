@@ -1,7 +1,7 @@
 
 export function createMarkup(results) {
     return results.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => {
-        return /*html*/ ` <li class="photo-card">
+        return /*html*/ ` <a class="photo-card" href="${largeImageURL}">
   <img class= "gallery-img" src="${webformatURL}" alt="${tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
@@ -17,7 +17,7 @@ export function createMarkup(results) {
       <b>Downloads</b>${downloads}
     </p>
   </div>
-</div>`
+</a>`
     })
     .join('');
 }
