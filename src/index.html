@@ -3,32 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>HW_11</title>
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
     <header class=" container js-header">
-        <form class="search-form" id="search-form">
-      <input
-        type="text"
-        class="input"
-        name="searchQuery"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
-      <button type="submit" class="search-btn">
-        <svg width="30" height="30" class="icon-input">
-            <use href="./images/icons.svg#icon-search"></use>
-        </svg></button>
-    </form>
+        <form class="search-form js-search-form" id="search-form">
+          <input
+            type="text"
+            class="input"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search images..."
+          />
+          <button type="submit" class="search-btn">
+            <svg width="30" height="30" class="icon-input">
+                <use href="./images/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
     </header>
-    <main class=" container">
+    <main class="container">
     <!-- ❗️❗️❗️ Add partials like so for every page -->
  
     <div class="gallery">
   <!-- Картки зображень -->
     </div>
+    <div class="js-btn-area">
+      <button type="button" class="load-more-btn is-hidden">Load more</button>
+
+    </div>
+
     </main>
+
+    
+
      </body>
 </html>
