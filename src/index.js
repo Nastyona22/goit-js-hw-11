@@ -9,7 +9,10 @@ import { pixabayAPI} from './js/pixabayAPI';
 import { createMarkup } from './js/createMarkup';
 
 
-const lightbox = new SimpleLightbox('.gallery a');
+const lightBox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 
 
 
@@ -37,6 +40,7 @@ const handleSubmit = async event => {
         if (totalHits > 0) {
             const markup = createMarkup(hits);
             refs.gallery.insertAdjacentHTML('beforeend', markup);
+            
 
             pixabay.calculateTotalPages(totalHits);
             Notify.success(`Hooray! We found ${totalHits} images.`);
@@ -85,6 +89,7 @@ const onLoadMore = () => {
             if (totalHits > 0) {
                 const markup = createMarkup(hits);
                 refs.gallery.insertAdjacentHTML('beforeend', markup);
+                lightBox.refresh();
             }
             else Notify.info('Sorry, there are no images matching your search query. Please try again');
         }).catch(error => {
@@ -103,3 +108,5 @@ function clearPage() {
     refs.loadMoreBtn.classList.add('is-hidden');
 
 }
+
+
